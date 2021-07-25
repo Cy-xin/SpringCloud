@@ -38,7 +38,6 @@ public class PaymentController {
         Payment result = paymentService.getPaymentById(id);
         CommonResult commonResult;
         log.info("-----查询数据-----");
-        System.out.println("=======");
         if (result != null) {
             commonResult = new CommonResult(200, "select data success", result);
         } else {

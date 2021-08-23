@@ -11,7 +11,20 @@ spring:
           search-paths:
             - springcloud-config
       label: master
+  #rabbitmq相关配置
+  rabbitmq:
+    host: 1.116.212.160
+    port: 5672
+    username: guest
+    password: guest
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+#rabbitmq相关配置，暴露bug刷新配置的端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
